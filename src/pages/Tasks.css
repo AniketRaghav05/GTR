@@ -1,0 +1,363 @@
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tasks-header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.tasks-header p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ADD BUTTON */
+
+.add-task-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-task-btn:hover {
+  background: #1d4ed8;
+}
+
+/* TABLE */
+
+.tasks-table {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* HEAD */
+
+.tasks-head {
+  display: grid;
+
+  grid-template-columns:
+    2.5fr
+    1fr
+    1fr
+    1fr
+    120px;
+
+  padding: 16px 22px;
+
+  background: #f9fafb;
+
+  border-bottom:
+    1px solid #e5e7eb;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #6b7280;
+
+  letter-spacing: 0.5px;
+}
+
+/* ROW */
+
+.tasks-row {
+  display: grid;
+
+  grid-template-columns:
+    2.5fr
+    1fr
+    1fr
+    1fr
+    120px;
+
+  align-items: center;
+
+  padding: 18px 22px;
+
+  border-bottom:
+    1px solid #f1f5f9;
+
+  transition: 0.2s;
+}
+
+.tasks-row:hover {
+  background: #f9fafb;
+}
+
+/* TASK INFO */
+
+.task-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.task-info p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ASSIGNED */
+
+.assigned {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* DUE DATE */
+
+.due-date {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* STATUS SELECT */
+
+.status-select {
+  border: none;
+
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+/* STATUS COLORS */
+
+.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.overdue {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* DELETE ALIGNMENT */
+
+.tasks-row > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  border: 1px solid #e5e7eb;
+}
+
+.empty-state h2 {
+  font-size: 24px;
+  color: #111827;
+}
+
+.empty-state p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* MODAL OVERLAY */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+/* MODAL */
+
+.task-modal {
+  width: 420px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.15);
+}
+
+.task-modal h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111827;
+}
+
+/* FORM */
+
+.task-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-modal input,
+.task-modal textarea,
+.task-modal select {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.task-modal textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+.task-modal input:focus,
+.task-modal textarea:focus,
+.task-modal select:focus {
+  border-color: #2563eb;
+}
+
+/* MODAL BUTTONS */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+/* CREATE */
+
+.modal-actions button[type="submit"] {
+  background: #2563eb;
+  color: white;
+}
+
+.modal-actions button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+/* CANCEL */
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .tasks-head {
+    display: none;
+  }
+
+  .tasks-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+}

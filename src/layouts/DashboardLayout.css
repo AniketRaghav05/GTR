@@ -1,0 +1,39 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* MAIN CONTENT */
+
+.main-section {
+  width: calc(100% - 260px);
+  margin-left: 260px;
+  min-height: 100vh;
+  background: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+/* WHEN SIDEBAR COLLAPSES */
+
+.main-section.expanded {
+  width: calc(100% - 92px);
+  margin-left: 92px;
+}
+
+/* PAGE CONTENT */
+
+.page-content {
+  padding: 24px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .main-section,
+  .main-section.expanded {
+    width: 100%;
+    margin-left: 0;
+  }
+
+}

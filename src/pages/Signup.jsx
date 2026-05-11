@@ -23,7 +23,7 @@ function Signup() {
       email: "",
       password: "",
       confirmPassword: "",
-      role: "Member"
+      role: "member"
 
     });
 
@@ -217,15 +217,15 @@ function Signup() {
                 onChange={handleChange}
               >
 
-                <option>
+                <option value="member">
                   Member
                 </option>
 
-                <option>
+                <option value="admin">
                   Admin
                 </option>
 
-                <option>
+                <option value="manager">
                   Manager
                 </option>
 

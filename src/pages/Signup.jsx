@@ -65,7 +65,7 @@ function Signup() {
 
         await axios.post(
 
-          "https://gtr-production-74e0.up.railway.app/api/auth/register",
+          "https://gtr-production-74e0.up.railway.app/api/auth/signup",
 
           {
 

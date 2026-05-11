@@ -21,9 +21,13 @@ const userSchema =
 
     role: {
       type: String,
-      enum: ["Admin", "Manager", "Member"],
-      default: "Member"
-    }
+      enum: [
+        "admin",
+        "manager",
+        "member"
+      ],
+    default: "member"
+  }
 
   }, {
     timestamps: true
